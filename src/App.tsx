@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { ThemeProvider } from 'styled-components'
+import Header from "./components/Header"
+import GlobalStyle from "./styles/GlobalStyle"
+import light from './styles/themes/light'
 
-const App = () => {
+const App = () => (
+ 
+    <ThemeProvider theme={light}>
+      <div className="App">
+        <GlobalStyle/>
+        <Header/>
+      </div>
+    </ThemeProvider>
 
-  return (
-    <div className="App">
-      <h1>Hello, World</h1>
-    </div>
-  )
-}
+)
 
 export default App
